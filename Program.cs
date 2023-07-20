@@ -33,7 +33,7 @@ double ratioScale = 1;
 
 Camera camera = new Camera(cameraPos, FOV, angle, ratio, ratioScale);
 
-// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(50,-3,-3), new Point3d(50,3,3));
+// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(9000,-1000,-1000), new Point3d(11000,1000,-1000));
 Cube cube = new Cube(new Point3d(9000, -1000, -1000), new Point3d(11000, 1000, 1000));
 Cube cube2 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
 

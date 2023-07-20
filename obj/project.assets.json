@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\3dTESTsharp\\3dTESTsharp.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
       "projectName": "3dTESTsharp",
-      "projectPath": "C:\\Users\\disrct\\Desktop\\3dTESTsharp\\3dTESTsharp.csproj",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
       "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\disrct\\Desktop\\3dTESTsharp\\obj\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
