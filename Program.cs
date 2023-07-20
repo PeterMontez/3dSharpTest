@@ -26,15 +26,16 @@ tm.Interval = 5;
 Pen pen = new Pen(Color.Black);
 
 Point3d cameraPos = new Point3d(0, 0, 0);
-double FOV = 20;
-Ratio ratio= new Ratio(16, 9, 720);
-Angle angle = new Angle(340, 0, 0);
+double FOV = 1000;
+Ratio ratio = new Ratio(16*100, 9*100, 720);
+Angle angle = new Angle(0, 0, 0);
 double ratioScale = 1;
 
 Camera camera = new Camera(cameraPos, FOV, angle, ratio, ratioScale);
 
-_3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(50,-3,-3), new Point3d(50,3,3));
-// Cube cube = new Cube(new Point3d(97,-3,-3), new Point3d(103,3,3));
+// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(50,-3,-3), new Point3d(50,3,3));
+Cube cube = new Cube(new Point3d(9000, -1000, -1000), new Point3d(11000, 1000, 1000));
+Cube cube2 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
 
 // camera.YawAdd(30);
 
@@ -51,9 +52,10 @@ tm.Tick += delegate
 
     g.Clear(Color.White);
 
-    g.DrawString($"{camera.cameraView.FOVpoint}", drawFont, Brushes.Black, drawPoint);
-    g.DrawString($"{triangles.Count}", drawFont, Brushes.Black, drawPoint2);
-    g.DrawString($"{camera.cameraView.angle.yaw}, {camera.cameraView.angle.pitch}", drawFont, Brushes.Black, drawPoint3);
+    g.DrawString($"Camera FOV: {camera.cameraView.FOVpoint}", drawFont, Brushes.Black, drawPoint);
+    g.DrawString($"{triangles.Count} Triangles Rendered", drawFont, Brushes.Black, drawPoint2);
+    g.DrawString($"Camera angles: {camera.cameraView.angle.yaw}, {camera.cameraView.angle.pitch}", drawFont, Brushes.Black, drawPoint3);
+    g.DrawString($"Camera position: {camera.position}", drawFont, Brushes.Black, drawPoint4);
 
     // g.DrawLine(new Pen(Color.Red), new Point(0, Screen.PrimaryScreen.Bounds.Height/2), new Point(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height/2));
     // g.DrawLine(new Pen(Color.Red), new Point(Screen.PrimaryScreen.Bounds.Width/2, 0), new Point(Screen.PrimaryScreen.Bounds.Width/2, Screen.PrimaryScreen.Bounds.Height));
@@ -89,6 +91,18 @@ form.KeyDown += (s, e) =>
         camera.PitchAdd(1);
     if (e.KeyCode == Keys.Down)
         camera.PitchAdd(-1);
+    if (e.KeyCode == Keys.W)
+        camera.Translate(100, 0, 0);
+    if (e.KeyCode == Keys.S)
+        camera.Translate(-100, 0, 0);
+    if (e.KeyCode == Keys.A)
+        camera.Translate(0, 0, -100);
+    if (e.KeyCode == Keys.D)
+        camera.Translate(0, 0, 100);
+    if (e.KeyCode == Keys.Z)
+        camera.Translate(0, -100, 0);
+    if (e.KeyCode == Keys.Space)
+        camera.Translate(0, 100, 0);
 };
 
 Application.Run(form);
