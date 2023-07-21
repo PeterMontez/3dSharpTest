@@ -33,9 +33,18 @@ double ratioScale = 1;
 
 Camera camera = new Camera(cameraPos, FOV, angle, ratio, ratioScale);
 
-// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(9000,-1000,-1000), new Point3d(11000,1000,-1000));
+// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(10000,-1000,-1000), new Point3d(10000,1000,1000));
 Cube cube = new Cube(new Point3d(9000, -1000, -1000), new Point3d(11000, 1000, 1000));
 Cube cube2 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
+Cube cube3 = new Cube(new Point3d(12000, -1000, -2000), new Point3d(14000, 1000, -4000));
+Cube cube4 = new Cube(new Point3d(6000, -1000, 2000), new Point3d(8000, 1000, 4000));
+Cube cube5 = new Cube(new Point3d(6000, -1000, -2000), new Point3d(8000, 1000, -4000));
+
+Cube cube0 = new Cube(new Point3d(1000, -1000, -9000), new Point3d(-1000, 1000, 11000));
+// Cube cube20 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
+// Cube cube30 = new Cube(new Point3d(12000, -1000, -2000), new Point3d(14000, 1000, -4000));
+// Cube cube40 = new Cube(new Point3d(6000, -1000, 2000), new Point3d(8000, 1000, 4000));
+// Cube cube50 = new Cube(new Point3d(6000, -1000, -2000), new Point3d(8000, 1000, -4000));
 
 // camera.YawAdd(30);
 
@@ -43,12 +52,15 @@ tm.Tick += delegate
 {
     List<Triangle2d> triangles = Scene.BruteRender(camera);
 
-    var drawFont = new Font("Arial", 16);
+    var drawFont = new Font("Arial", 10);
 
     PointF drawPoint = new PointF(150.0F, 150.0F);
-    PointF drawPoint2 = new PointF(150.0F, 200.0F);
-    PointF drawPoint3 = new PointF(150.0F, 250.0F);
-    PointF drawPoint4 = new PointF(150.0F, 300.0F);
+    PointF drawPoint2 = new PointF(150.0F, 175.0F);
+    PointF drawPoint3 = new PointF(150.0F, 200.0F);
+    PointF drawPoint4 = new PointF(150.0F, 225.0F);
+    PointF drawPoint5 = new PointF(150.0F, 250.0F);
+    PointF drawPoint6 = new PointF(150.0F, 275.0F);
+    PointF drawPoint7 = new PointF(150.0F, 300.0F);
 
     g.Clear(Color.White);
 
@@ -56,6 +68,8 @@ tm.Tick += delegate
     g.DrawString($"{triangles.Count} Triangles Rendered", drawFont, Brushes.Black, drawPoint2);
     g.DrawString($"Camera angles: {camera.cameraView.angle.yaw}, {camera.cameraView.angle.pitch}", drawFont, Brushes.Black, drawPoint3);
     g.DrawString($"Camera position: {camera.position}", drawFont, Brushes.Black, drawPoint4);
+    g.DrawString($"Edge points: P0: ({camera.cameraView.points[0]}) / P1: ({camera.cameraView.points[1]})", drawFont, Brushes.Black, drawPoint5);
+    g.DrawString($"Edge points: P2: ({camera.cameraView.points[2]}) / P3: ({camera.cameraView.points[3]})", drawFont, Brushes.Black, drawPoint6);
 
     // g.DrawLine(new Pen(Color.Red), new Point(0, Screen.PrimaryScreen.Bounds.Height/2), new Point(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height/2));
     // g.DrawLine(new Pen(Color.Red), new Point(Screen.PrimaryScreen.Bounds.Width/2, 0), new Point(Screen.PrimaryScreen.Bounds.Width/2, Screen.PrimaryScreen.Bounds.Height));
@@ -92,17 +106,17 @@ form.KeyDown += (s, e) =>
     if (e.KeyCode == Keys.Down)
         camera.PitchAdd(-1);
     if (e.KeyCode == Keys.W)
-        camera.Translate(100, 0, 0);
+        camera.Translate(50, 0, 0);
     if (e.KeyCode == Keys.S)
-        camera.Translate(-100, 0, 0);
+        camera.Translate(-50, 0, 0);
     if (e.KeyCode == Keys.A)
-        camera.Translate(0, 0, -100);
+        camera.Translate(0, 0, -50);
     if (e.KeyCode == Keys.D)
-        camera.Translate(0, 0, 100);
+        camera.Translate(0, 0, 50);
     if (e.KeyCode == Keys.Z)
-        camera.Translate(0, -100, 0);
+        camera.Translate(0, -50, 0);
     if (e.KeyCode == Keys.Space)
-        camera.Translate(0, 100, 0);
+        camera.Translate(0, 50, 0);
 };
 
 Application.Run(form);
