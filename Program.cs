@@ -26,21 +26,22 @@ tm.Interval = 5;
 Pen pen = new Pen(Color.Black);
 
 Point3d cameraPos = new Point3d(0, 0, 0);
-double FOV = 1000;
-Ratio ratio = new Ratio(16*100, 9*100, 720);
-Angle angle = new Angle(0, 0, 0);
+double FOV = 800;
+Ratio ratio = new Ratio(16*100, 16*100, 720);
+Angle angle = new Angle(0, 10, 0);
 double ratioScale = 1;
 
 Camera camera = new Camera(cameraPos, FOV, angle, ratio, ratioScale);
 
-// _3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(10000,-1000,-1000), new Point3d(10000,1000,1000));
-Cube cube = new Cube(new Point3d(9000, -1000, -1000), new Point3d(11000, 1000, 1000));
-Cube cube2 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
-Cube cube3 = new Cube(new Point3d(12000, -1000, -2000), new Point3d(14000, 1000, -4000));
-Cube cube4 = new Cube(new Point3d(6000, -1000, 2000), new Point3d(8000, 1000, 4000));
-Cube cube5 = new Cube(new Point3d(6000, -1000, -2000), new Point3d(8000, 1000, -4000));
+_3dSharp.Panel panel = new _3dSharp.Panel(new Point3d(10000,-1000,-1000), new Point3d(10000,1000,1000));
 
-Cube cube0 = new Cube(new Point3d(1000, -1000, -9000), new Point3d(-1000, 1000, 11000));
+// Cube cube = new Cube(new Point3d(9000, -1000, -1000), new Point3d(11000, 1000, 1000));
+// Cube cube2 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
+// Cube cube3 = new Cube(new Point3d(12000, -1000, -2000), new Point3d(14000, 1000, -4000));
+// Cube cube4 = new Cube(new Point3d(6000, -1000, 2000), new Point3d(8000, 1000, 4000));
+// Cube cube5 = new Cube(new Point3d(6000, -1000, -2000), new Point3d(8000, 1000, -4000));
+
+// Cube cube0 = new Cube(new Point3d(1000, -1000, -9000), new Point3d(-1000, 1000, 11000));
 // Cube cube20 = new Cube(new Point3d(12000, -1000, 2000), new Point3d(14000, 1000, 4000));
 // Cube cube30 = new Cube(new Point3d(12000, -1000, -2000), new Point3d(14000, 1000, -4000));
 // Cube cube40 = new Cube(new Point3d(6000, -1000, 2000), new Point3d(8000, 1000, 4000));
