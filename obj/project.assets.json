@@ -27,32 +27,34 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Peter\\.nuget\\packages\\": {}
+    "C:\\Users\\disrct\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Peter\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
+      "projectUniqueName": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
       "projectName": "3dTESTsharp",
-      "projectPath": "C:\\Users\\Peter\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
-      "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Peter\\Desktop\\3dSharpTest\\obj\\",
+      "projectPath": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\3dTESTsharp.csproj",
+      "packagesPath": "C:\\Users\\disrct\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\disrct\\Desktop\\3dSharpTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\disrct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
           "projectReferences": {
-            "C:\\Users\\Peter\\Desktop\\3dSharp\\3dSharp.csproj": {
-              "projectPath": "C:\\Users\\Peter\\Desktop\\3dSharp\\3dSharp.csproj"
+            "C:\\Users\\disrct\\Desktop\\3dSharp\\3dSharp.csproj": {
+              "projectPath": "C:\\Users\\disrct\\Desktop\\3dSharp\\3dSharp.csproj"
             }
           }
         }
@@ -85,7 +87,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
